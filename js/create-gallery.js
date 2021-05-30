@@ -3,7 +3,7 @@ import gallery from './gallery-items.js';
 const ref = {
   galeryList: document.querySelector('.js-gallery'),
   modalCase: document.querySelector('.lightbox'),
-  closedModalbatton: document.querySelector('.lightbox__button'),
+  closedModalbatton: document.querySelector('[data-action="close-lightbox"]'),
   currentImage: document.querySelector('.lightbox__image'),
   beckDrop: document.querySelector('.lightbox__overlay')
 }
