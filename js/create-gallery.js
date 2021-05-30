@@ -36,6 +36,7 @@ function templateItemGallery(gallery) {
 
 function openModal(event) {
   event.preventDefault();
+  window.addEventListener('keydown', onEscDown);
 
   if (!event.target.classList.contains('gallery__image')) {
     return;
@@ -46,6 +47,13 @@ function openModal(event) {
 };
 
 function closedModal() {
+  window.removeEventListener('keydown', onEscDown);
   ref.modalCase.classList.remove('is-open');
   ref.currentImage.setAttribute(crs, '');
+}
+
+function onEscDown(event) {
+  if (event.code === 'Escape') {
+    closedModal();
+  }
 }
