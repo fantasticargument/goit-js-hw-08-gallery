@@ -5,6 +5,7 @@ const ref = {
   modalCase: document.querySelector('.lightbox'),
   closedModalbatton: document.querySelector('.lightbox__button'),
   currentImage: document.querySelector('.lightbox__image'),
+  beckDrop: document.querySelector('.lightbox__overlay')
 }
 
 const makeGalleryList = templateItemGallery(gallery);
@@ -12,6 +13,7 @@ ref.galeryList.insertAdjacentHTML('beforeend', makeGalleryList)
 
 ref.galeryList.addEventListener('click', openModal)
 ref.closedModalbatton.addEventListener('click', closedModal)
+ref.beckDrop.addEventListener('click', closedModal)
 
 function templateItemGallery(gallery) {
   return gallery.map(({ preview, original, description }) => {
@@ -44,6 +46,6 @@ function openModal(event) {
 };
 
 function closedModal() {
-  ref.currentImage.src = null;
+  ref.currentImage.removeAttribute('src');
   ref.modalCase.classList.remove('is-open');
 }
