@@ -46,6 +46,6 @@ function openModal(event) {
 };
 
 function closedModal() {
-  ref.currentImage.removeAttribute('src');
+  ref.currentImage.setAttribute(crs, null);
   ref.modalCase.classList.remove('is-open');
 }
