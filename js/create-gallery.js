@@ -47,5 +47,5 @@ function openModal(event) {
 
 function closedModal() {
   ref.modalCase.classList.remove('is-open');
-  ref.currentImage.setAttribute(crs, value);
+  ref.currentImage.setAttribute(crs, '');
 }
