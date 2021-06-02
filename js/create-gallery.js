@@ -49,7 +49,7 @@ function openModal(event) {
 function closedModal() {
   window.removeEventListener('keydown', onEscDown);
   ref.modalCase.classList.remove('is-open');
-  ref.currentImage.setAttribute('crs', '');
+  ref.currentImage.setAttribute('crs', ' ');
 }
 
 function onEscDown(event) {
