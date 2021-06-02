@@ -35,6 +35,7 @@ function templateItemGallery(gallery) {
 };
 
 function openModal(event) {
+  ref.currentImage.setAttribute('crs', ' ');
   event.preventDefault();
   window.addEventListener('keydown', onEscDown);
 
@@ -49,7 +50,7 @@ function openModal(event) {
 function closedModal() {
   window.removeEventListener('keydown', onEscDown);
   ref.modalCase.classList.remove('is-open');
-  ref.currentImage.setAttribute('crs', ' ');
+  
 }
 
 function onEscDown(event) {
